@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,52 +15,64 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfD-1G-K7B">
-                                <rect key="frame" x="8" y="86" width="156" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set default meal name"/>
-                                <connections>
-                                    <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTJ-2p-Y2s"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
-                                <rect key="frame" x="0.0" y="36" width="414" height="50.333333333333329"/>
+                                <rect key="frame" x="8" y="51.999999999999972" width="359" height="439.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-Db-uy7">
-                                        <rect key="frame" x="8" y="0.0" width="406" height="20.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-Db-uy7">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d63-QO-Cev">
-                                        <rect key="frame" x="8" y="20.333333333333332" width="406" height="29.999999999999996"/>
+                                        <rect key="frame" x="0.0" y="20.333333333333329" width="359" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfD-1G-K7B">
+                                        <rect key="frame" x="0.0" y="50.333333333333336" width="359" height="30.000000000000007"/>
+                                        <state key="normal" title="Set default meal name"/>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTJ-2p-Y2s"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="UEe-9F-alD">
+                                        <rect key="frame" x="0.0" y="80.333333333333371" width="359" height="359"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UEe-9F-alD" secondAttribute="height" multiplier="1:1" id="AkV-HU-3kp"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="d63-QO-Cev" secondAttribute="trailing" constant="8" id="gou-Qy-PLf"/>
-                                    <constraint firstAttribute="trailing" secondItem="Snx-Db-uy7" secondAttribute="trailing" constant="8" id="lzD-sV-AoK"/>
-                                    <constraint firstItem="Snx-Db-uy7" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" constant="8" id="oP3-re-p0n"/>
-                                    <constraint firstItem="d63-QO-Cev" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" constant="8" id="x4z-J8-HYb"/>
+                                    <constraint firstItem="Snx-Db-uy7" firstAttribute="top" secondItem="pyN-ka-tGk" secondAttribute="top" id="1fv-UN-mkH"/>
+                                    <constraint firstItem="hfD-1G-K7B" firstAttribute="top" secondItem="d63-QO-Cev" secondAttribute="bottom" id="6Lt-xN-MHz"/>
+                                    <constraint firstItem="UEe-9F-alD" firstAttribute="top" secondItem="hfD-1G-K7B" secondAttribute="bottom" id="6gn-Z8-cFE"/>
+                                    <constraint firstAttribute="trailing" secondItem="UEe-9F-alD" secondAttribute="trailing" id="B5N-ev-b7P"/>
+                                    <constraint firstItem="Snx-Db-uy7" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="GY5-8G-Ts2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Snx-Db-uy7" secondAttribute="trailing" id="J1f-Js-0GZ"/>
+                                    <constraint firstItem="d63-QO-Cev" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="NFh-pf-NX3"/>
+                                    <constraint firstItem="hfD-1G-K7B" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="SmV-Nv-bWh"/>
+                                    <constraint firstItem="UEe-9F-alD" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="c4T-b5-rHa"/>
+                                    <constraint firstItem="d63-QO-Cev" firstAttribute="top" secondItem="Snx-Db-uy7" secondAttribute="bottom" id="lJL-Oy-qph"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pyN-ka-tGk" secondAttribute="trailing" id="9gz-OG-GqO"/>
-                            <constraint firstItem="pyN-ka-tGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bpl-u4-2PB"/>
-                            <constraint firstItem="pyN-ka-tGk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="VlZ-jo-DTv"/>
+                            <constraint firstItem="pyN-ka-tGk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VDo-1r-0oL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pyN-ka-tGk" secondAttribute="trailing" constant="8" id="kx3-Ls-Jgj"/>
+                            <constraint firstItem="pyN-ka-tGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="oHF-p4-eNY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="Snx-Db-uy7" id="mYg-dT-yJ8"/>
                         <outlet property="nameTextField" destination="d63-QO-Cev" id="cCs-cq-XOk"/>
+                        <outlet property="photoImageView" destination="UEe-9F-alD" id="MiO-U5-7P4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
