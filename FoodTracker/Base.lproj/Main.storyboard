@@ -58,8 +58,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="Snx-Db-uy7" id="mYg-dT-yJ8"/>
-                        <outlet property="textField" destination="d63-QO-Cev" id="cCs-cq-XOk"/>
+                        <outlet property="mealNameLabel" destination="Snx-Db-uy7" id="mYg-dT-yJ8"/>
+                        <outlet property="nameTextField" destination="d63-QO-Cev" id="cCs-cq-XOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
