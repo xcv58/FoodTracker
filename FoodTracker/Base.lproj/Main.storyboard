@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
-                                <rect key="frame" x="8" y="51.999999999999972" width="359" height="439.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
+                                <rect key="frame" x="8" y="52" width="359" height="549.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-Db-uy7">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="20.333333333333332"/>
@@ -51,6 +51,9 @@
                                             <outletCollection property="gestureRecognizers" destination="EPH-76-O9O" appends="YES" id="nTn-JA-UIc"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-QC-vzg" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="439.33333333333331" width="359" height="109.99999999999994"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Snx-Db-uy7" firstAttribute="top" secondItem="pyN-ka-tGk" secondAttribute="top" id="1fv-UN-mkH"/>
@@ -61,8 +64,10 @@
                                     <constraint firstAttribute="trailing" secondItem="Snx-Db-uy7" secondAttribute="trailing" id="J1f-Js-0GZ"/>
                                     <constraint firstItem="d63-QO-Cev" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="NFh-pf-NX3"/>
                                     <constraint firstItem="hfD-1G-K7B" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="SmV-Nv-bWh"/>
+                                    <constraint firstItem="A0X-QC-vzg" firstAttribute="leading" secondItem="UEe-9F-alD" secondAttribute="leading" id="Tt6-Es-O12"/>
                                     <constraint firstItem="UEe-9F-alD" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="c4T-b5-rHa"/>
                                     <constraint firstItem="d63-QO-Cev" firstAttribute="top" secondItem="Snx-Db-uy7" secondAttribute="bottom" id="lJL-Oy-qph"/>
+                                    <constraint firstAttribute="trailing" secondItem="A0X-QC-vzg" secondAttribute="trailing" id="v2b-o5-ffq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
