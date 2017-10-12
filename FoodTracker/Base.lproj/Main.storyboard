@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment version="4096" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -51,8 +52,8 @@
                                             <outletCollection property="gestureRecognizers" destination="EPH-76-O9O" appends="YES" id="nTn-JA-UIc"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-QC-vzg" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="439.33333333333331" width="359" height="109.99999999999994"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-QC-vzg" userLabel="Rating Control" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="439.33333333333331" width="279" height="109.99999999999994"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -64,7 +65,6 @@
                                     <constraint firstAttribute="trailing" secondItem="Snx-Db-uy7" secondAttribute="trailing" id="J1f-Js-0GZ"/>
                                     <constraint firstItem="d63-QO-Cev" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="NFh-pf-NX3"/>
                                     <constraint firstItem="hfD-1G-K7B" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="SmV-Nv-bWh"/>
-                                    <constraint firstItem="A0X-QC-vzg" firstAttribute="leading" secondItem="UEe-9F-alD" secondAttribute="leading" id="Tt6-Es-O12"/>
                                     <constraint firstItem="UEe-9F-alD" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="c4T-b5-rHa"/>
                                     <constraint firstItem="d63-QO-Cev" firstAttribute="top" secondItem="Snx-Db-uy7" secondAttribute="bottom" id="lJL-Oy-qph"/>
                                     <constraint firstAttribute="trailing" secondItem="d63-QO-Cev" secondAttribute="trailing" id="uTq-wt-fUO"/>
@@ -74,11 +74,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="pyN-ka-tGk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="VDo-1r-0oL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pyN-ka-tGk" secondAttribute="trailing" constant="8" id="kx3-Ls-Jgj"/>
-                            <constraint firstItem="pyN-ka-tGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="oHF-p4-eNY"/>
+                            <constraint firstItem="pyN-ka-tGk" firstAttribute="top" secondItem="YSu-GD-HWh" secondAttribute="top" constant="8" id="VDo-1r-0oL"/>
+                            <constraint firstItem="YSu-GD-HWh" firstAttribute="trailing" secondItem="pyN-ka-tGk" secondAttribute="trailing" constant="8" id="kx3-Ls-Jgj"/>
+                            <constraint firstItem="pyN-ka-tGk" firstAttribute="leading" secondItem="YSu-GD-HWh" secondAttribute="leading" constant="8" id="oHF-p4-eNY"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="YSu-GD-HWh"/>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="Snx-Db-uy7" id="mYg-dT-yJ8"/>
@@ -93,7 +93,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="93.750000000000014"/>
+            <point key="canvasLocation" x="136.80000000000001" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>
