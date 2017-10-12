@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
                                 <rect key="frame" x="8" y="52" width="359" height="549.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-Db-uy7">
@@ -35,7 +35,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfD-1G-K7B">
-                                        <rect key="frame" x="0.0" y="50.333333333333329" width="359" height="30"/>
+                                        <rect key="frame" x="0.0" y="50.333333333333329" width="153" height="30"/>
                                         <state key="normal" title="Set default meal name"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTJ-2p-Y2s"/>
@@ -67,7 +67,7 @@
                                     <constraint firstItem="A0X-QC-vzg" firstAttribute="leading" secondItem="UEe-9F-alD" secondAttribute="leading" id="Tt6-Es-O12"/>
                                     <constraint firstItem="UEe-9F-alD" firstAttribute="leading" secondItem="pyN-ka-tGk" secondAttribute="leading" id="c4T-b5-rHa"/>
                                     <constraint firstItem="d63-QO-Cev" firstAttribute="top" secondItem="Snx-Db-uy7" secondAttribute="bottom" id="lJL-Oy-qph"/>
-                                    <constraint firstAttribute="trailing" secondItem="A0X-QC-vzg" secondAttribute="trailing" id="v2b-o5-ffq"/>
+                                    <constraint firstAttribute="trailing" secondItem="d63-QO-Cev" secondAttribute="trailing" id="uTq-wt-fUO"/>
                                 </constraints>
                             </stackView>
                         </subviews>
