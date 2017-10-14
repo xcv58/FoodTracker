@@ -33,20 +33,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-7a-QFq" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="35" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="tss-zy-w5W">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GCe-7a-QFq" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                            <rect key="frame" x="98" y="35" width="252" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="Rlo-z0-sos" id="k8K-Tt-NYN"/>
                                     <outlet property="photoImageView" destination="tss-zy-w5W" id="ckL-mn-Lcn"/>
                                     <outlet property="ratingControl" destination="GCe-7a-QFq" id="50a-vj-2RY"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="Uzc-ha-qSV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -178,10 +179,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XMp-sa-ndE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606.39999999999998" y="48.768472906403943"/>
+            <point key="canvasLocation" x="586" y="513"/>
         </scene>
     </scenes>
     <resources>
         <image name="Image" width="816" height="1088"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uzc-ha-qSV"/>
+    </inferredMetricsTieBreakers>
 </document>
