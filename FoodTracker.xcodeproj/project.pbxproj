@@ -14,6 +14,7 @@
 		DF7B91741F8B4BDA00118012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7B91731F8B4BDA00118012 /* Assets.xcassets */; };
 		DF7B91771F8B4BDB00118012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7B91751F8B4BDB00118012 /* LaunchScreen.storyboard */; };
 		DF7B91821F8B4BDB00118012 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B91811F8B4BDB00118012 /* FoodTrackerTests.swift */; };
+		DFC9C9CE1F91BFA00076264B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9C9CD1F91BFA00076264B /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DF7B917D1F8B4BDB00118012 /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7B91811F8B4BDB00118012 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		DF7B91831F8B4BDB00118012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFC9C9CD1F91BFA00076264B /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				DF7B916E1F8B4BDA00118012 /* ViewController.swift */,
 				DF39B3981F8DEEB300BC92B5 /* RatingControl.swift */,
 				DF7B91701F8B4BDA00118012 /* Main.storyboard */,
+				DFC9C9CD1F91BFA00076264B /* Meal.swift */,
 				DF7B91731F8B4BDA00118012 /* Assets.xcassets */,
 				DF7B91751F8B4BDB00118012 /* LaunchScreen.storyboard */,
 				DF7B91781F8B4BDB00118012 /* Info.plist */,
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFC9C9CE1F91BFA00076264B /* Meal.swift in Sources */,
 				DF7B916F1F8B4BDA00118012 /* ViewController.swift in Sources */,
 				DF39B3991F8DEEB300BC92B5 /* RatingControl.swift in Sources */,
 				DF7B916D1F8B4BDA00118012 /* AppDelegate.swift in Sources */,
