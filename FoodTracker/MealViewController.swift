@@ -73,6 +73,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         }
         // Enable the Save button only if the text field has a valid Meal name.
         updateSaveButtonState()
+        nameTextField.addTarget(self, action: #selector(didChangeText(textField:)), for: .editingChanged)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,13 +85,17 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     // MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the Save button while editing.
-        saveButton.isEnabled = false
+        updateSaveButtonState()
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
+    }
+
+    @objc func didChangeText(textField: UITextField) {
+        updateSaveButtonState()
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
