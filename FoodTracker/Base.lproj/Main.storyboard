@@ -76,8 +76,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
-                                <rect key="frame" x="8" y="96" width="359" height="433"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pyN-ka-tGk">
+                                <rect key="frame" x="8" y="96" width="359" height="455"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d63-QO-Cev">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
@@ -86,7 +86,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="UEe-9F-alD">
-                                        <rect key="frame" x="0.0" y="30" width="359" height="359"/>
+                                        <rect key="frame" x="0.0" y="38" width="359" height="359"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UEe-9F-alD" secondAttribute="height" multiplier="1:1" id="AkV-HU-3kp"/>
@@ -95,8 +95,8 @@
                                             <outletCollection property="gestureRecognizers" destination="EPH-76-O9O" appends="YES" id="nTn-JA-UIc"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-QC-vzg" userLabel="Rating Control" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="389" width="252" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-QC-vzg" userLabel="Rating Control" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="405" width="252" height="50"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
