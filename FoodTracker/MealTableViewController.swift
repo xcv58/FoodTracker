@@ -15,6 +15,18 @@ class MealTableViewController: UITableViewController {
     var meals = [Meal]()
 
     // MARK: Private Methods
+    private func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+        }
+    }
+
+    private func loadMeals() -> [Meal]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Meal.ArchiveURL.path) as? [Meal]
+    }
 
     private func loadSampleMeals() {
         let photo1 = UIImage(named: "meal 1")
@@ -50,7 +62,7 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
-
+            saveMeals()
         }
     }
 
@@ -58,8 +70,13 @@ class MealTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
         // Load the sample data.
-        loadSampleMeals()
-
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        }
+        if meals.count == 0 {
+            os_log("Load sample meals.", log: OSLog.default, type: .debug)
+            loadSampleMeals()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -127,6 +144,7 @@ class MealTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+        saveMeals()
      }
 
     /*
